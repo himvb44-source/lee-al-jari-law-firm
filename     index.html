@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة عبد الرحمن الجري للمحاماة والاستشارات القانونية</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts & CDN Fonts - Option 1 Typography (29LT Bukra & DIN Next Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/din-next-arabic" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#0F172A', // Navy Blue Dark
+                            light: '#1E293B',
+                            accent: '#334155'
+                        },
+                        gold: {
+                            light: '#E6CA94',
+                            DEFAULT: '#C5A880', // Premium Legal Gold
+                            dark: '#A38458',
+                        },
+                        accent: '#8B0000'
+                    },
+                    fontFamily: {
+                        sans: ['"DIN Next Arabic"', 'Cairo', 'sans-serif'],
+                        heading: ['"29LT Bukra"', '"29LT Bukra Bold"', 'Cairo', 'sans-serif'],
+                        menu: ['"DIN Next Arabic"', 'Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: '29LT Bukra';
+            src: local('29LT Bukra Bold'), local('29LTBukra-Bold'), url('https://fonts.cdnfonts.com/s/72898/29LTBukra-Bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'DIN Next Arabic', 'Cairo', sans-serif;
+            font-weight: 400; /* Regular للنصوص والتفاصيل */
+            background-color: #FAFBFD;
+            color: #1E293B;
+            scroll-behavior: smooth;
+        }
+
+        /* العناوين الرئيسية: 29LT Bukra Bold */
+        h1, h2, h3, h4, .font-heading {
+            font-family: '29LT Bukra', '29LT Bukra Bold', 'Cairo', sans-serif;
+            font-weight: 700;
+        }
+
+        /* الأزرار والقوائم: DIN Next Arabic Medium */
+        button, a, nav, .btn-font {
+            font-family: 'DIN Next Arabic', 'Cairo', sans-serif;
+            font-weight: 500;
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #E6CA94 0%, #C5A880 50%, #9A7B4F 100%);
+        }
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #C5A880 50%, #8A6D3B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-overlay {
+            background: linear-gradient(270deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 50%, rgba(15, 23, 42, 0.4) 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-white">
+
+    <!-- 1. الهيدر العلوي (Top Header) -->
+    <header class="bg-primary text-slate-300 py-2 border-b border-slate-800 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-6">
+                <!-- الثلث الأيمن: فارغ للحفاظ على البساطة -->
+                <div class="hidden sm:block w-1/3"></div>
+                
+                <!-- الثلث الأوسط: اسم الشركة فقط -->
+                <div class="w-full sm:w-1/3 text-center font-semibold text-gold tracking-wide">
+                    شركة عبد الرحمن الجري للمحاماة والاستشارات القانونية
+                </div>
+                
+                <!-- الثلث الأيسر: معلومات الاتصال السريعة -->
+                <div class="hidden sm:flex w-1/3 justify-end items-center gap-4 text-slate-400 text-xs">
+                    <span class="hover:text-gold transition"><i class="fa-solid fa-phone text-gold ml-1"></i> 920000000</span>
+                    <span class="hover:text-gold transition"><i class="fa-solid fa-envelope text-gold ml-1"></i> info@aljarray.sa</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. شريط التنقل الرئيسي (Main Sticky Navigation) -->
+    <nav id="mainNav" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- الشعار (Logo) -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-lg gold-gradient flex items-center justify-center text-primary font-bold text-2xl shadow-md">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xl font-bold font-heading text-primary tracking-tight">الجري</span>
+                            <span class="text-[10px] text-gold-dark font-medium -mt-1 tracking-widest">لـلـمـحـامـاة والاستشارات</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- روابط الصفحات الرئيسية (Desktop Menu) -->
+                <div class="hidden lg:flex items-center space-x-8 space-x-reverse font-medium text-slate-700 text-sm">
+                    <a href="#hero" class="text-gold font-semibold transition py-2 border-b-2 border-gold">الرئيسية</a>
+                    <a href="#about" class="hover:text-gold transition py-2">عن المكتب</a>
+                    <a href="#services" class="hover:text-gold transition py-2">خدماتنا</a>
+                    <a href="#why-us" class="hover:text-gold transition py-2">لماذا شركة الجري</a>
+                    <a href="#contact" class="hover:text-gold transition py-2">تواصل معنا</a>
+                </div>
+
+                <!-- زر طلب الاستشارة في النفق الرئيسي -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <button onclick="openModal()" class="gold-gradient text-primary font-bold px-5 py-2.5 rounded-lg shadow-md hover:brightness-105 transition text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>اطلب استشارتك</span>
+                    </button>
+                </div>
+
+                <!-- أيقونة القائمة للنسخة المتجاوبة (Mobile Burger Icon) -->
+                <div class="flex lg:hidden items-center">
+                    <button id="mobileMenuBtn" class="text-slate-700 hover:text-gold p-2 rounded-md focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- القائمة المنسدلة للجوال (Mobile Drawer) -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#hero" class="block px-3 py-2 rounded-md text-base font-semibold text-gold bg-slate-50">الرئيسية</a>
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-gold">عن المكتب</a>
+            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-gold">خدماتنا</a>
+            <a href="#why-us" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-gold">لماذا شركة الجري</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-gold">تواصل معنا</a>
+            <button onclick="openModal()" class="w-full mt-2 gold-gradient text-primary font-bold px-4 py-3 rounded-lg shadow text-center">
+                اطلب استشارتك الآن
+            </button>
+        </div>
+    </nav>
+
+    <!-- 3. المساحة الفارغة المحسوبة بصرياً (White Spacing Area) -->
+    <div class="h-6 sm:h-10 bg-transparent"></div>
+
+    <!-- 4. قسم الواجهة الرئيسية (Hero Section) -->
+    <section id="hero" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-primary min-h-[520px] flex items-center">
+            
+            <!-- خلفية معتمة وفاخرة بلمسة رسمية -->
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 hero-overlay"></div>
+            
+            <!-- محتوى الهيرو -->
+            <div class="relative z-10 max-w-2xl px-6 sm:px-12 py-16 text-white">
+                <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-gold/30 px-3 py-1 rounded-full text-gold text-xs font-semibold mb-6">
+                    <i class="fa-solid fa-award"></i>
+                    <span>مكتب محاماة معتمد وخبرات قانونية راسخة</span>
+                </div>
+                
+                <h1 class="text-3xl sm:text-5xl font-extrabold font-heading leading-tight mb-6 text-white">
+                    حماية حقوقك ورعاية مصالحك <span class="gold-text-gradient block mt-2">بأعلى معايير النزاهة والاحتراف</span>
+                </h1>
+                
+                <p class="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed font-light">
+                    نقدم منظومة شاملة من الخدمات والاستشارات القانونية بأسلوب عصري يضمن للعملاء حلولاً دقيقة وتغطية شاملة لكافة القضايا والمنازعات المعقدة.
+                </p>
+                
+                <div class="flex flex-wrap items-center gap-4">
+                    <button onclick="openModal()" class="gold-gradient text-primary font-bold px-8 py-4 rounded-xl shadow-lg hover:brightness-110 transition text-base flex items-center gap-3">
+                        <span>اطلب استشارتك</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <a href="#services" class="bg-white/10 hover:bg-white/20 text-white font-medium border border-white/20 px-6 py-4 rounded-xl transition text-base backdrop-blur-sm">
+                        استكشف خدماتنا
+                    </a>
+                </div>
+            </div>
+            
+            <!-- عنصر ديكوري للمظهر الفخم -->
+            <div class="hidden lg:block absolute left-12 bottom-12 border-r-2 border-gold/40 pr-6 text-slate-300">
+                <p class="text-3xl font-bold font-heading text-gold mb-1">15+</p>
+                <p class="text-xs text-slate-400">عقود من الخبرة والعدالة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. قسم الخدمات (Section Medium) -->
+    <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-16">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-gold font-bold text-sm tracking-wider uppercase">مجالات اختصاصنا</span>
+            <h2 class="text-3xl font-bold font-heading text-primary mt-2">خدماتنا القانونية الرئيسية</h2>
+            <div class="w-16 h-1 gold-gradient mx-auto mt-4 rounded-full"></div>
+            <p class="text-slate-600 mt-4 text-sm sm:text-base">نغطي كافة القطاعات والأنشطة القانونية بمهنية رفيعة تلبي تطلعات الأفراد والشركات.</p>
+        </div>
+
+        <!-- شبكة الخدمات (Cards Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- الخدمة 1 -->
+            <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm card-hover relative overflow-hidden group">
+                <div class="w-14 h-14 rounded-xl bg-slate-50 border border-slate-100 text-gold flex items-center justify-center text-2xl mb-6 group-hover:bg-gold group-hover:text-primary transition duration-300">
+                    <i class="fa-solid fa-gavel"></i>
+                </div>
+                <h3 class="text-xl font-bold font-heading text-primary mb-3">التقاضي والترافع</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">تمثيل موكلينا أمام كافة المحاكم واللجان القضائية بمختلف درجاتها بأسلوب مراقبة وتفنيد علمي محكم.</p>
+                <a href="#" class="inline-flex items-center text-sm font-bold text-gold hover:text-gold-dark transition gap-2">
+                    <span>تفاصيل الخدمة</span>
+                    <i class="fa-solid fa-angle-left text-xs"></i>
+                </a>
+            </div>
+
+            <!-- الخدمة 2 -->
+            <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm card-hover relative overflow-hidden group">
+                <div class="w-14 h-14 rounded-xl bg-slate-50 border border-slate-100 text-gold flex items-center justify-center text-2xl mb-6 group-hover:bg-gold group-hover:text-primary transition duration-300">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <h3 class="text-xl font-bold font-heading text-primary mb-3">الاستشارات القانونية</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">تقديم الرأي القانوني السديد والمبني على الأنظمة واللوائح الحديثة لحماية قرارك الاستثماري والشخصي.</p>
+                <a href="#" class="inline-flex items-center text-sm font-bold text-gold hover:text-gold-dark transition gap-2">
+                    <span>تفاصيل الخدمة</span>
+                    <i class="fa-solid fa-angle-left text-xs"></i>
+                </a>
+            </div>
+
+            <!-- الخدمة 3 -->
+            <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm card-hover relative overflow-hidden group">
+                <div class="w-14 h-14 rounded-xl bg-slate-50 border border-slate-100 text-gold flex items-center justify-center text-2xl mb-6 group-hover:bg-gold group-hover:text-primary transition duration-300">
+                    <i class="fa-solid fa-stamp"></i>
+                </div>
+                <h3 class="text-xl font-bold font-heading text-primary mb-3">التوثيق</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">إفراز وتوثيق العقود والإقرارات والوكالات الرسمية بكل مرونة وبما يضمن حماية كامل الأطراف وفق الأنظمة.</p>
+                <a href="#" class="inline-flex items-center text-sm font-bold text-gold hover:text-gold-dark transition gap-2">
+                    <span>تفاصيل الخدمة</span>
+                    <i class="fa-solid fa-angle-left text-xs"></i>
+                </a>
+            </div>
+
+            <!-- الخدمة 4 -->
+            <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm card-hover relative overflow-hidden group">
+                <div class="w-14 h-14 rounded-xl bg-slate-50 border border-slate-100 text-gold flex items-center justify-center text-2xl mb-6 group-hover:bg-gold group-hover:text-primary transition duration-300">
+                    <i class="fa-solid fa-file-contract"></i>
+                </div>
+                <h3 class="text-xl font-bold font-heading text-primary mb-3">صياغة ومراجعة العقود</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">إعداد الشروط والاتفاقيات التجارية والميدانية بدقة متناهية تحمي من النزاعات الثنائية القادمة.</p>
+                <a href="#" class="inline-flex items-center text-sm font-bold text-gold hover:text-gold-dark transition gap-2">
+                    <span>تفاصيل الخدمة</span>
+                    <i class="fa-solid fa-angle-left text-xs"></i>
+                </a>
+            </div>
+
+            <!-- الخدمة 5 -->
+            <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm card-hover relative overflow-hidden group">
+                <div class="w-14 h-14 rounded-xl bg-slate-50 border border-slate-100 text-gold flex items-center justify-center text-2xl mb-6 group-hover:bg-gold group-hover:text-primary transition duration-300">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+                <h3 class="text-xl font-bold font-heading text-primary mb-3">تأسيس الشركات</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">مرافقة المستثمرين في كافة مراحل التأسيس والحوكمة واستخراج التراخيص اللازمة للكيانات الاقتصادية.</p>
+                <a href="#" class="inline-flex items-center text-sm font-bold text-gold hover:text-gold-dark transition gap-2">
+                    <span>تفاصيل الخدمة</span>
+                    <i class="fa-solid fa-angle-left text-xs"></i>
+                </a>
+            </div>
+
+            <!-- بطاقة إضافية دعائية -->
+            <div class="bg-primary rounded-2xl p-8 text-white flex flex-col justify-between shadow-md relative overflow-hidden">
+                <div class="relative z-10">
+                    <span class="text-gold text-xs font-bold uppercase tracking-wider">حلول متكاملة</span>
+                    <h3 class="text-2xl font-bold font-heading mt-2 mb-4">هل لديك قضية أو استفسار خاص؟</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">فريقنا القانوني جاهز لدراسة ملفك وتوفير الخيار الاستراتيجي الأنسب لك.</p>
+                </div>
+                <button onclick="openModal()" class="gold-gradient text-primary font-bold px-6 py-3 rounded-xl hover:brightness-110 transition text-sm text-center z-10">
+                    تواصل مع مستشار
+                </button>
+            </div>
+
+        </div>
+
+        <!-- زر عرض جميع الخدمات -->
+        <div class="text-center mt-12">
+            <a href="#" class="inline-flex items-center gap-2 border border-slate-300 hover:border-gold text-primary hover:text-gold bg-white px-8 py-3.5 rounded-xl font-bold transition text-sm shadow-sm">
+                <span>عرض جميع الخدمات القانونية</span>
+                <i class="fa-solid fa-th-large text-xs"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 6. قسم الوعي والخبرات - لماذا شركة عبد الرحمن الجري؟ (Section Medium Down) -->
+    <section id="why-us" class="bg-slate-900 text-white py-20 relative overflow-hidden">
+        
+        <!-- خلفية جمالية -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 bg-gold/10 text-gold px-4 py-1.5 rounded-full text-xs font-bold mb-4 border border-gold/20">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Why Al-Jarray?</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading">لماذا تختار شركة عبد الرحمن الجري للمحاماة؟</h2>
+                <p class="text-slate-400 mt-4 text-base leading-relaxed">
+                    نجمع بين الفهم العميق للأنظمة والخبرة التراكمية الطويلة لتقديم تمثيل قانوني محترف يضع مصالح عملائنا في مقدمة الأولويات.
+                </p>
+            </div>
+
+            <!-- شبكة المميزات الـ 6 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. الموثوقية -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-7 hover:border-gold/50 transition duration-300">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center text-primary text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-shield-cat"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-white">1. الموثوقية</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>التزام مهني راسخ بمعايير العدالة</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>شراكة قانونية قائمة على الشفافية والنزاهة</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>سمعة موثوقة تمتد إلى نتائج ملموسة</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 2. الخصوصية وسرية المعلومات -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-7 hover:border-gold/50 transition duration-300">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center text-primary text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-white">2. الخصوصية والسرية</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>إجراءات صارمة لحماية بيانات العملاء</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>تعامل آمن مع الملفات والمراسلات القانونية</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>احترام مطلق للخصوصية في جميع المراحل</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 3. التخصص والخبرة -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-7 hover:border-gold/50 transition duration-300">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center text-primary text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-white">3. التخصص والخبرة</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>فريق قانوني متعدد الخبرات والتخصصات</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>اطلاع دائم على أحدث الأنظمة والتعديلات</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>حلول قانونية دقيقة مبنية على خبرة عملية</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 4. التمثيل الفعال أمام الجهات القضائية -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-7 hover:border-gold/50 transition duration-300">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center text-primary text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-white">4. التمثيل الفعّال</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>حضور متميز أمام المحاكم واللجان القضائية</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>إدارة القضايا بفاعلية واحترافية عالية</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>مرافعات مدعومة بأدلة وتحليل قانوني عميق</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 5. التركيز على العميل -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-7 hover:border-gold/50 transition duration-300">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center text-primary text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-white">5. التركيز على العميل</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>فهم دقيق لاحتياجات العميل القانونية والتجارية</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>حلول مصممة خصيصاً لكل حالة وقضية</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>تواصل مستمر وشفاف طوال فترة التعامل</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 6. الالتزام الزمني والجودة -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-7 hover:border-gold/50 transition duration-300">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center text-primary text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-white">6. الالتزام والجودة</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>احترام الجداول الزمنية والالتزامات التعاقدية</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>تدقيق شامل في كل مستند وخطوة قانونية</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                            <span>جودة تنفيذ تعكس الحرفية والاهتمام بالتفاصيل</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. الـ Footer الشامل -->
+    <footer id="contact" class="bg-primary text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- عمود 1: نبذة وشعار -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg gold-gradient flex items-center justify-center text-primary font-bold text-xl">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <span class="text-2xl font-bold font-heading text-white">الجري</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        شركة عبد الرحمن الجري للمحاماة والاستشارات القانونية، كيان قانوني موثوق يقدم أحدث الحلول القانونية بمهنية واستراتيجية متكاملة.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gold hover:text-primary transition flex items-center justify-center text-slate-300"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gold hover:text-primary transition flex items-center justify-center text-slate-300"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gold hover:text-primary transition flex items-center justify-center text-slate-300"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- عمود 2: Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold font-heading mb-6 border-r-2 border-gold pr-3">روابط سريعة</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#hero" class="hover:text-gold transition">عن الشركة</a></li>
+                        <li><a href="#services" class="hover:text-gold transition">الخدمات القانونية</a></li>
+                        <li><a href="#why-us" class="hover:text-gold transition">لماذا شركة الجري؟</a></li>
+                        <li><a href="#" class="hover:text-gold transition">الأخبار والمقالات القانونية</a></li>
+                        <li><a href="#contact" class="hover:text-gold transition">تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- عمود 3: معلومات التواصل -->
+                <div>
+                    <h4 class="text-white font-bold font-heading mb-6 border-r-2 border-gold pr-3">معلومات التواصل</h4>
+                    <ul class="space-y-4 text-sm text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-gold mt-1"></i>
+                            <span>المملكة العربية السعودية - الرياض، طريق الملك فهد</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-gold"></i>
+                            <span dir="ltr">+966 9200 00000</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-gold"></i>
+                            <span>info@aljarray.sa</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- عمود 4: خريطة Google Maps -->
+                <div>
+                    <h4 class="text-white font-bold font-heading mb-6 border-r-2 border-gold pr-3">موقع المكتب</h4>
+                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-700 bg-slate-800 h-36 relative flex items-center justify-center text-center p-4">
+                        <div class="text-slate-400 text-xs">
+                            <i class="fa-solid fa-map-location-dot text-3xl text-gold mb-2 block"></i>
+                            <span>مقر شركة عبد الرحمن الجري للمحاماة على الخريطة</span>
+                            <a href="https://maps.google.com" target="_blank" class="block text-gold underline mt-1 hover:text-white transition">افتح في خرائط جوجل</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- حقوق الملكية -->
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+                <p>جميع الحقوق محفوظة © <span id="currentYear"></span> لشركة عبد الرحمن الجري للمحاماة والاستشارات القانونية.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 8. زر واتساب عائم + Popup عائم -->
+    <div class="fixed bottom-6 left-6 z-50 flex flex-col items-start gap-3">
+        
+        <!-- Popup بسيط -->
+        <div id="whatsappPopup" class="bg-white text-slate-800 p-4 rounded-2xl shadow-2xl border border-slate-100 max-w-xs relative hidden sm:block">
+            <button onclick="dismissPopup()" class="absolute top-2 right-2 text-slate-400 hover:text-slate-600 text-xs p-1">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg flex-shrink-0">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-slate-900">هل تحتاج إلى استشارة قانونية؟</p>
+                    <p class="text-[11px] text-slate-500 mt-0.5">تواصل معنا مباشرة عبر الواتساب</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/966500000000" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-110">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+        </a>
+    </div>
+
+    <!-- نافذة طلب استشارة (Modal) -->
+    <div id="consultationModal" class="fixed inset-0 bg-primary/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 left-4 text-slate-400 hover:text-slate-600 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold font-heading text-primary">طلب استشارة قانونية</h3>
+                <p class="text-slate-500 text-sm mt-1">أدخل بياناتك وسيتواصل معك أحد مستشارينا في أقرب وقت</p>
+            </div>
+            <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">الاسم الكامل</label>
+                    <input type="text" required placeholder="أدخل اسمك الكريم" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-gold text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">رقم الجوال</label>
+                    <input type="tel" required placeholder="05xxxxxxxx" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-gold text-sm text-right" dir="ltr">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">نوع الخدمة المطلوب</label>
+                    <select class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-gold text-sm">
+                        <option>التقاضي والترافع</option>
+                        <option>استشارة قانونية العامة</option>
+                        <option>صياغة ومراجعة العقود</option>
+                        <option>تأسيس وحوكمة الشركات</option>
+                        <option>خدمات التوثيق</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">ملخص الاستفسار</label>
+                    <textarea rows="3" placeholder="اكتب تفاصيل مختصرة..." class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-gold text-sm"></textarea>
+                </div>
+                <button type="submit" class="w-full gold-gradient text-primary font-bold py-3.5 rounded-lg shadow hover:brightness-105 transition text-base">
+                    إرسال الطلب
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Update current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal Controls
+        function openModal() {
+            document.getElementById('consultationModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('consultationModal').classList.add('hidden');
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert('تم استلام طلب الاستشارة بنجاح، وسيتواصل معك فريق شركة عبد الرحمن الجري القانوني قريباً.');
+            closeModal();
+        }
+
+        function dismissPopup() {
+            document.getElementById('whatsappPopup').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
